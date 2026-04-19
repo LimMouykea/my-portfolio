@@ -20,6 +20,18 @@ import EducationPage from '@/views/EducationPage.vue';
 import SkillPage from '@/views/SkillPage.vue';
 import ProjectPage from '@/views/ProjectPage.vue';
 import ContactPage from '@/views/ContactPage.vue';
+import image from '@/assets/image/photo_2026-03-03_21-37-04.jpg'
+
+import { useSeoMeta } from '@unhead/vue'
+
+useSeoMeta({
+    title: 'Lim Mouykea - Portfolio',
+    description: 'Full-Stack Developer based in Phnom Penh',
+    ogTitle: 'Lim Mouykea - Projects',
+    ogDescription: 'Check out my latest work in Laravel and Vue.',
+    ogImage: image,
+    twitterCard: 'summary_large_image',
+})
 
 const isCollapsed = ref(false);
 const activeSection = ref('about');
