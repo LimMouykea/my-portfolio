@@ -42,6 +42,7 @@ import image1 from '@/assets/image/project/image1.png'
 import image2 from '@/assets/image/project/image2.png'
 import image3 from '@/assets/image/project/image3.png'
 import image4 from '@/assets/image/project/image4.png'
+import image5 from '@/assets/image/project/image.png'
 const projects = ref([
     {
         id: 1,
@@ -71,6 +72,13 @@ const projects = ref([
         image: image4,
         link : "https://www.youtube.com/watch?v=UuCTQJ9Xpl8"
     },
+    {
+        id: 5,
+        title : "Book Store",
+        category: "Laravel 12 Restful API / PostgreSQL",
+        image: image5,
+        link : ""
+    }
 ]);
 
 </script>
@@ -145,9 +153,6 @@ const projects = ref([
         font-size: 2.2rem;
     }
 
-    /* On mobile, make the overlay slightly visible or use a click-to-show pattern */
-    /* If you want users to see titles without hovering on mobile: */
-    /* .card-overlay { opacity: 0.1; } */
 }
 
 @media (max-width: 400px) {
