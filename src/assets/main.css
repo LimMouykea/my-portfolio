@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'roboto', sans-serif;
+  src: url('../fonts/Roboto-Regular.ttf');
+  font-family: 'kantumruy';
+  src: url('../fonts/KantumruyPro-Regular.ttf');
+}
+
+body {
+  font-family: 'kantumruy', 'roboto', sans-serif !important;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section-container {
+  min-height: 100vh;
+  padding: 80px 10%;
+  display: flex;
+  flex-direction: column;
+  /* Added to keep your vertical stack */
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #168193;
+  width: 100%;
+}
+
+@media (max-width: 1400px) {
+  .section-container {
+    padding: 60px 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-container {
+    padding: 40px 20px;
+    height: auto;
+    min-height: auto;
+  }
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
