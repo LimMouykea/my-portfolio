@@ -17,11 +17,11 @@
                         </div>
 
                         <div class="card-overlay d-flex flex-column justify-content-center align-items-center text-center p-4">
-                            <span class="badge bg-accent mb-2 text-uppercase letter-spacing-1">
+                            <span class="badge bg-accent mb-2 text-uppercase letter-spacing-1 project-category">
                                 {{ project.category }}
                             </span>
 
-                            <h4 class="text-white fw-bold mb-4 px-2">{{ project.title }}</h4>
+                            <h4 class="text-white fw-bold mb-4 px-2 project-title">{{ project.title }}</h4>
 
                             <a :href="project.link" target="_blank" class="mt-2">
                                 <button class="btn btn-outline-light rounded-pill px-4 btn-sm-mobile">
@@ -42,7 +42,8 @@ import image1 from '@/assets/image/project/image1.png'
 import image2 from '@/assets/image/project/image2.png'
 import image3 from '@/assets/image/project/image3.png'
 import image4 from '@/assets/image/project/image4.png'
-import image5 from '@/assets/image/project/image.png'
+import image5 from '@/assets/image/project/image5.png'
+import image6 from '@/assets/image/project/image6.png'
 const projects = ref([
     {
         id: 1,
@@ -74,10 +75,17 @@ const projects = ref([
     },
     {
         id: 5,
-        title : "Book Store",
-        category: "Laravel 12 Restful API / PostgreSQL",
+        title : "Tos Louk (On develop)",
+        category: "Laravel 12 Restful API / PostgreSQL / Nuxt / Tailwind",
         image: image5,
         link : ""
+    },
+    {
+        id: 6,
+        title: "E-Submit",
+        category : "Fullstack (Vue / Bootstrap / Node Express / JWT)",
+        image: image6,
+        link : "http://e-submit-v1-front-es.e-submit.linkpc.net/"
     }
 ]);
 
@@ -141,6 +149,23 @@ const projects = ref([
 
 .letter-spacing-1 {
     letter-spacing: 1.5px;
+}
+
+.project-title { 
+    font-size: clamp(1.1rem, 3vw, 1.4rem) !important; /* Scales between 1.1rem and 1.4rem depending on screen size */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    line-height: 1.4;
+}
+
+.project-category {
+    font-size: clamp(0.65rem, 2.5vw, 0.85rem);
+    white-space: normal; /* Allows long category text to wrap */
+    line-height: 1.4;
+    padding: 8px 12px;
 }
 
 /* Mobile Specific Adjustments */

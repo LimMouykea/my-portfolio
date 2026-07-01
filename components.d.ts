@@ -15,7 +15,6 @@ declare module 'vue' {
     ElProgress: typeof import('element-plus/es')['ElProgress']
     ElTimeline: typeof import('element-plus/es')['ElTimeline']
     ElTimelineItem: typeof import('element-plus/es')['ElTimelineItem']
-    Project: typeof import('./src/components/Project.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SideBar: typeof import('./src/components/layout/SideBar.vue')['default']
